@@ -1,0 +1,244 @@
+body {
+  background-image: url('images/amam.png');
+  background-repeat: repeat;
+  background-size: 150px 150px;   /* ✅ force scale down */
+  background-position: top left;
+}
+
+
+.container-fluid {
+  min-height: 100vh;
+  position: relative;
+}
+
+.sidebar {
+  background-color: transparent;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 6px 0;
+  color: #776e65;
+}
+
+.sidebar ul li::before {
+  content: '📄';
+  margin-right: 10px;
+}
+
+.sidebar ul li:nth-child(2)::before { content: '🎮'; }
+.sidebar ul li:nth-child(3)::before { content: '📊'; }
+.sidebar ul li:nth-child(4)::before { content: '🎧'; }
+
+.language-label {
+  position: fixed;
+  top: 10px;
+  right: -110px;
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #776e65;
+  z-index: 1000;
+}
+
+.main-content {
+  background-color: #cbbfbf;
+  padding: 40px;
+  margin: 40px auto;
+  border-radius: 10px;
+  max-width: 800px;
+  text-align: center;
+}
+
+
+.game-header {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.score-container {
+  background: #bbada0;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin: 5px;
+  min-width: 110px;
+  text-align: center;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
+  background: #bbada0;
+  padding: 10px;
+  border-radius: 6px;
+  width: max-content;
+  margin: 20px auto;
+  box-shadow: none;
+}
+
+.tile {
+  width: 100px;
+  height: 100px;
+  background: #cdc1b4;
+  color: #776e65;
+  font-size: 45px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.05);
+}
+
+
+.tile-2    { background: #eee4da; color: #776e65; }
+.tile-4    { background: #ede0c8; color: #776e65; }
+.tile-8    { background: #f2b179; color: #f9f6f2; }
+.tile-16   { background: #f59563; color: #f9f6f2; }
+.tile-32   { background: #f67c5f; color: #f9f6f2; }
+.tile-64   { background: #f65e3b; color: #f9f6f2; }
+.tile-128  { background: #edcf72; color: #f9f6f2; }
+.tile-256  { background: #edcc61; color: #f9f6f2; }
+.tile-512  { background: #edc850; color: #f9f6f2; }
+.tile-1024 { background: #edc53f; color: #f9f6f2; }
+.tile-2048 { background: #edc22e; color: #f9f6f2; }
+
+
+.instructions {
+  margin: 40px auto 0;
+  max-width: 440px;
+  color: #776e65;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.instructions strong {
+  font-weight: bold;
+  color: #776e65;
+}
+body, p, a, u, .info-box {
+  font-family: 'Segoe UI', sans-serif;
+  color: #776e65;
+}
+
+/* Underlined bold words */
+.learn-text u,
+.learn-text a,
+.text-center u {
+  color: #817566 !important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Paragraph spacing and alignment */
+.learn-text p {
+  font-size: 17px;
+  line-height: 1.7;
+  padding-bottom: 12px;
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+
+/* Info boxes */
+.info-box {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  transition: 0.3s;
+  color: #776e65;
+  max-width: 260px;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+   text-decoration: underline;
+}
+
+.info-box:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.03);
+}
+
+/* Learn more paragraph styling */
+.learn-text p {
+  font-size: 17px;
+  line-height: 1.7;
+  padding-bottom: 12px;
+  text-align: justify;
+  margin-bottom: 0.8rem;
+}
+.tips-and-tricks li a {
+  display: inline-block;
+  padding: 10px 0;
+  width: 242px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  font-weight: bold;
+  color: #776e65;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.tips-and-tricks li a:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.03);
+}
+.unstyled {
+  list-style: none;
+}
+.learn-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.4px;
+  color: #695f55;
+  text-align: justify;
+  margin-top: 30px;
+}
+.main-content {
+  max-width: 800px; /* not 100% */
+  width: 90%;
+  margin: 40px auto;
+}
+.language-label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+  color: #5f564a;
+  font-weight: 600;
+}
+
+.footer-links {
+  font-size: 12px; /* ✅ Change this to whatever size you want */
+  color: #5f564a;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  margin-top: 10px;
+}

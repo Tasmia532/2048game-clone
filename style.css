@@ -1,13 +1,8 @@
-
 body {
-  background-image: url("images/amam.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: #f9f6f2; /* Light solid background */
   min-height: 100vh;
   overflow-y: auto;
 }
-
 
 .container-fluid {
   /* ✅ Remove vh height to allow scrolling */
